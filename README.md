@@ -1,1 +1,1 @@
-# snippint_tool :scissors:
+# snipping_tool :scissors:
