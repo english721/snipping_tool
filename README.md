@@ -1,1 +1,1 @@
-# snippint_tool
+# snippint_tool :scissors:
