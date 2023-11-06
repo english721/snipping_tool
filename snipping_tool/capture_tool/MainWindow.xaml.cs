@@ -39,5 +39,10 @@ namespace capture_tool
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
