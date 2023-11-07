@@ -7,6 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "capture_tool", "capture_too
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F39B15AF-DE20-4E4B-A233-7D8C75F0E17B}"
 	ProjectSection(SolutionItems) = preProject
+		..\..\..\..\Downloads\closewindowapplication.ico = ..\..\..\..\Downloads\closewindowapplication.ico
+		..\..\..\..\Downloads\maximizewindowapplication.ico = ..\..\..\..\Downloads\maximizewindowapplication.ico
+		..\..\..\..\Downloads\minimizewindowapplication.ico = ..\..\..\..\Downloads\minimizewindowapplication.ico
 		..\..\..\Downloads\snipping_tool.ico = ..\..\..\Downloads\snipping_tool.ico
 	EndProjectSection
 EndProject

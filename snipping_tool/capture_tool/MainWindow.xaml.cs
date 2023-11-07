@@ -21,28 +21,38 @@ namespace capture_tool
     /// </summary>
     public partial class MainWindow : Window
     {
-        public int X;
-        public int Y;
 
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        private void Window_LocationChanged(object sender, DragEventArgs e)
+        private void Rectangle_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            
-
+            this.DragMove();
         }
 
-        private void Window_StateChanged(object sender, EventArgs e)
-        {
 
+        private void ToMiniButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void ToMaxOrNormalButton_Click(object sender, RoutedEventArgs e)
         {
+            if(this.WindowState == System.Windows.WindowState.Maximized)
+            {
+                this.WindowState = System.Windows.WindowState.Normal;
+            }
+            else
+            {
+                this.WindowState = System.Windows.WindowState.Maximized;
+            }
+        }
 
+        private void CloseButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

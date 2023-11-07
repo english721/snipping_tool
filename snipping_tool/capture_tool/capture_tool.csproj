@@ -103,5 +103,10 @@
   <ItemGroup>
     <Resource Include="snipping_tool.ico" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="closewindowapplication.ico" />
+    <Resource Include="maximizewindowapplication.ico" />
+    <Resource Include="minimizewindowapplication.ico" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
