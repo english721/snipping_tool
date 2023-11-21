@@ -8,8 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("closewindowapplication.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("maximizewindowapplication.ico")]
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("minimizewindowapplication.ico")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("question.ico")]
 
 

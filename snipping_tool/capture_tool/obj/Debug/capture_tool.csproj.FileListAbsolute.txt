@@ -24,7 +24,6 @@ C:\Users\youjin\source\repos\capture_tool\snipping_tool\capture_tool\bin\Debug\c
 C:\Users\youjin\source\repos\capture_tool\snipping_tool\capture_tool\bin\Debug\capture_tool.pdb
 C:\Users\youjin\source\repos\capture_tool\snipping_tool\capture_tool\obj\Debug\MainWindow.baml
 C:\Users\youjin\source\repos\capture_tool\snipping_tool\capture_tool\obj\Debug\capture_tool.g.resources
-C:\Users\youjin\source\repos\capture_tool\snipping_tool\capture_tool\obj\Debug\capture_tool.Properties.Resources.resources
 C:\Users\youjin\source\repos\capture_tool\snipping_tool\capture_tool\obj\Debug\capture_tool.csproj.GenerateResource.cache
 C:\Users\youjin\source\repos\capture_tool\snipping_tool\capture_tool\obj\Debug\capture_tool.csproj.CoreCompileInputs.cache
-C:\Users\youjin\source\repos\capture_tool\snipping_tool\capture_tool\obj\Debug\capture_tool.csprojAssemblyReference.cache
+C:\Users\youjin\source\repos\capture_tool\snipping_tool\capture_tool\obj\Debug\capture_tool.ScreenCapture.Properties.Resources.resources

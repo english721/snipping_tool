@@ -6,7 +6,7 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{22D38E7B-7FFD-4775-B7E8-A1B2931EB65B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>capture_tool</RootNamespace>
+    <RootNamespace>capture_tool.ScreenCapture</RootNamespace>
     <AssemblyName>capture_tool</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -40,6 +40,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -58,6 +59,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ScreenCapture.cs" />
+    <Compile Include="ScreenCaptureException.cs" />
+    <Compile Include="Win32Api\Gdi32.cs" />
+    <Compile Include="Win32Api\User32.cs" />
+    <Compile Include="Win32Api\Win32Point.cs" />
+    <Compile Include="Win32Api\Win32Rect.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -107,6 +114,13 @@
     <Resource Include="closewindowapplication.ico" />
     <Resource Include="maximizewindowapplication.ico" />
     <Resource Include="minimizewindowapplication.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="question.ico" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

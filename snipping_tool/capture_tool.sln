@@ -10,6 +10,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		..\..\..\..\Downloads\closewindowapplication.ico = ..\..\..\..\Downloads\closewindowapplication.ico
 		..\..\..\..\Downloads\maximizewindowapplication.ico = ..\..\..\..\Downloads\maximizewindowapplication.ico
 		..\..\..\..\Downloads\minimizewindowapplication.ico = ..\..\..\..\Downloads\minimizewindowapplication.ico
+		..\..\..\..\Downloads\question_mark_icon_153882.ico = ..\..\..\..\Downloads\question_mark_icon_153882.ico
 		..\..\..\Downloads\snipping_tool.ico = ..\..\..\Downloads\snipping_tool.ico
 	EndProjectSection
 EndProject
