@@ -59,12 +59,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="CaptureUserControl.xaml.cs">
+      <DependentUpon>CaptureUserControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ScreenCapture.cs" />
     <Compile Include="ScreenCaptureException.cs" />
     <Compile Include="Win32Api\Gdi32.cs" />
     <Compile Include="Win32Api\User32.cs" />
     <Compile Include="Win32Api\Win32Point.cs" />
     <Compile Include="Win32Api\Win32Rect.cs" />
+    <Page Include="CaptureUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

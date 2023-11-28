@@ -11,8 +11,8 @@ namespace capture_tool.ScreenCapture
 {
     class ScreenCapture
     {
-
-
+        
+        
         public static BitmapSource CaptureRegion(int x, int y, int width, int height, bool addToClipboard)
         {
 
@@ -30,6 +30,7 @@ namespace capture_tool.ScreenCapture
 
             try
             {
+
                 // gets the main desktop and all open windows
                 sourceDC = User32.GetDC(User32.GetDesktopWindow());
                 targetDC = Gdi32.CreateCompatibleDC(sourceDC);
@@ -71,5 +72,10 @@ namespace capture_tool.ScreenCapture
             }
             return bitmap;
         }
+
+        // 
+        // 기존의 CaptureRegion 함수는 직접 x, y값을 인수로 주었음 어떤 기준점을 기반으로 그 x, y 값 만큼 저장했음
+        // -> CaptureCoordinate 함수를 통해 전체 스크린샷을 한 화면에서 빨간색 상자로 선택된 x, y 좌표 값 만큼만 저장해야 함. 
+        // 전체 스크린샷을 찍는다 + 투명도 => 그 화면 위에서 마우스 cross모양으로 화면의 부분을 선택할 수 있게 한다. => 마우스 다시 돌아오고 캡쳐된 부분만 보여진다. 
     }
 }

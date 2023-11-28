@@ -16,8 +16,7 @@ using System.Drawing;
 using System.Drawing.Imaging;
 using System.IO;
 using capture_tool.Win32Api;
-
-
+using System.Diagnostics;
 
 namespace capture_tool.ScreenCapture
 {
@@ -64,16 +63,27 @@ namespace capture_tool.ScreenCapture
 
         private void MakeNewButton_Click(object sender, RoutedEventArgs e)
         {
-            ImgCapture.Source = ScreenCapture.CaptureRegion(100, 100, 500, 500, true);
+            //this.contentControl.Height = 500;
+            this.Cursor = Cursors.Cross;
+            this.contentControl.Content = new CaptureUserControl();
+
         }
+
 
         private void CaptureModeButton_Click(object sender, RoutedEventArgs e)
         {
 
         }
 
-        
-        
+
+        private void Hyperlink_RequestNavigate(object sender, RequestNavigateEventArgs e)
+        {
+            Process.Start(new ProcessStartInfo(e.Uri.AbsoluteUri));
+            e.Handled = true;
+        }
+
+
+
 
         //public void ScreenCapture()
         //{
@@ -83,7 +93,7 @@ namespace capture_tool.ScreenCapture
         //    int width = (int)SystemParameters.PrimaryScreenWidth;
         //    int height = (int)SystemParameters.PrimaryScreenHeight;
 
-            
+
 
         //    // 화면 크기만큼의 Bitmap 생성
         //    using (Bitmap bmp = new Bitmap(width, height, System.Drawing.Imaging.PixelFormat.Format32bppArgb))

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:capture_tool.ScreenCapture"
         mc:Ignorable="d"
-        Title="캡처 도구" Height="100" Width="500" Background="AliceBlue" WindowStyle="None" 
+        Title="캡처 도구"  Width="500" Background="Blue" WindowStyle="None"
         ResizeMode="NoResize" 
         AllowsTransparency="True"
         >
@@ -13,6 +13,7 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="30" />
+            <RowDefinition Height="40" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
@@ -90,7 +91,7 @@
                         Click="MakeNewButton_Click">
                     <DockPanel>
                         <Image HorizontalAlignment="Left" Source="snipping_tool.ico" Margin="-10,0,5,0"/>
-                        <TextBlock VerticalAlignment="Center">새로 만들기(N)</TextBlock>
+                        <TextBlock VerticalAlignment="Center">새로 만들기(<Underline>N</Underline>)</TextBlock>
                     </DockPanel>
                 </Button>
 
@@ -113,7 +114,7 @@
                         </ComboBox>
                         <DockPanel Margin="-95, 0, 0, 0">
                             <Image HorizontalAlignment="Left" Source="snipping_tool.ico" Margin="0,0,5,0" />
-                            <TextBlock VerticalAlignment="Center">모드(M)</TextBlock>
+                            <TextBlock VerticalAlignment="Center">모드(<Underline>M</Underline>)</TextBlock>
                         </DockPanel>
                         
                         
@@ -122,7 +123,7 @@
                 <Button x:Name="DelayButton" ToolTip="캡처 작성 지연">
                     <DockPanel>
                         <Image HorizontalAlignment="Left" Source="snipping_tool.ico" Margin="0,0,5,0" />
-                        <TextBlock VerticalAlignment="Center">지연(D)</TextBlock>
+                        <TextBlock VerticalAlignment="Center">지연(<Underline>D</Underline>)</TextBlock>
                         <ComboBox Width="10">
                             <ComboBoxItem>지연 없음</ComboBoxItem>
                             <ComboBoxItem>1초</ComboBoxItem>
@@ -136,13 +137,13 @@
                 <Button x:Name="CaptureCancelButton" ToolTip="캡처 취소">
                     <DockPanel>
                         <Image HorizontalAlignment="Left" Source="snipping_tool.ico" Margin="0,0,5,0"/>
-                        <TextBlock VerticalAlignment="Center">취소(C)</TextBlock>
+                        <TextBlock VerticalAlignment="Center">취소(<Underline>C</Underline>)</TextBlock>
                     </DockPanel>
                 </Button>
                 <Button x:Name="OptionButton" ToolTip="기타 옵션...">
                     <DockPanel>
                         <Image HorizontalAlignment="Left" Source="snipping_tool.ico" Margin="0,0,5,0"/>
-                        <TextBlock VerticalAlignment="Center">옵션(O)</TextBlock>
+                        <TextBlock VerticalAlignment="Center">옵션(<Underline>O</Underline>)</TextBlock>
                     </DockPanel>
                 </Button>
                 
@@ -150,15 +151,28 @@
 
         </Grid>
 
+
+
         <Grid Grid.Row="2">
-            <Image x:Name="ImgCapture" Width="500"></Image>
-            <DockPanel VerticalAlignment="Bottom">
+            <DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Bottom">
+                <ContentControl x:Name="contentControl" Height="0" Grid.Row="2"/>
+
+
                 <Label>모드 단추를 사용하여 캡처 모드를 선택하거나 새로 만들기 단추를 클릭합니다.</Label>
-                <Image Source="question.ico" Width="15"
-                       HorizontalAlignment="Right"
-                       Margin="0,0,8,0"></Image>
+                <TextBlock HorizontalAlignment="Right" VerticalAlignment="Center">
+                        <Hyperlink NavigateUri="https://support.microsoft.com/ko-kr/windows/%EC%BA%A1%EC%B2%98-%EB%8F%84%EA%B5%AC%EB%A5%BC-%EC%82%AC%EC%9A%A9%ED%95%98%EC%97%AC-%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7-%EC%BA%A1%EC%B2%98-00246869-1843-655f-f220-97299b865f6b" RequestNavigate="Hyperlink_RequestNavigate">
+                            <Image x:Name ="QuestionButton" Source="question.ico" Width="15"
+                           Cursor="Hand"
+                           Margin="0,0,3,0"></Image>
+                        </Hyperlink>
+                </TextBlock>
+
+
+                <!--<local:CaptureUserControl x:Name="CaptureUserControl"/>-->
             </DockPanel>
-            
+
         </Grid>
+        
+
     </Grid>
 </Window>
